@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
-  //res.send('Hello World!');
+  //res.send('Hello World');
   res.render('index', {weather: null, error: null});
 })
 
