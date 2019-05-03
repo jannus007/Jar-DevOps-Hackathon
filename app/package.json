@@ -1,0 +1,28 @@
+{
+  "name": "jar-devops-hackathon",
+  "version": "1.0.0",
+  "description": "DevOps Hackathon 2019",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jannus007/Jar-DevOps-Hackathon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jannus007/Jar-DevOps-Hackathon/issues"
+  },
+  "homepage": "https://github.com/jannus007/Jar-DevOps-Hackathon#readme",
+  "dependencies": {
+    "body-parse": "^0.1.0",
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {}
+}
