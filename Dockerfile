@@ -13,8 +13,12 @@ RUN npm install
 # RUN npm ci --only=production
 
 # Bundle app source
-COPY /app/public/* /app/views/* /app/server.js /app/
+COPY app/public /app/public
+COPY app/views /app/views
+COPY /app/server.js /app/
 
-CMD node server.js
+#port
 EXPOSE 3000
-# CMD [ "npm", "start" ]
+
+#start command
+CMD node server.js
