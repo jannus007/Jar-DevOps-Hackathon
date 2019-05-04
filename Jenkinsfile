@@ -8,14 +8,14 @@ pipeline {
         }
     stage('Docker pull images') {
 		  steps {
-			withDockerRegistry(credentialsId: 'JenkinsDockerHub', url:'') {
+			withDockerRegistry() {
 			  sh 'docker pull jana2007/jar-devops-hackathon'
 			}
 		}
     }
     stage('Run') {
 		  steps {
-			withDockerRegistry(credentialsId: 'JenkinsDockerHub', url:'') {
+			withDockerRegistry() {
 			  sh 'docker run --rm -p 3000:3000 jana2007/jar-devops-hackathon:latest'
 			}
 		}
