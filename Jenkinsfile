@@ -21,13 +21,13 @@ pipeline {
 	// 	}
   //   }
 
-    stage('Docker pull images') {
-		  steps {
-			//withDockerRegistry(credentialsId: 'docker-key', url:'') {
-			  shell 'docker pull jana2007/jar-devops-hackathon'
-			//}
-		}
-    }
+    // stage('Docker pull images') {
+		//   steps {
+		// 	//withDockerRegistry(credentialsId: 'docker-key', url:'') {
+		// 	  shell 'docker pull jana2007/jar-devops-hackathon'
+		// 	//}
+		// }
+    // }
     stage('Run') {
 		  steps {
 			//withDockerRegistry(credentialsId: 'docker-key', url:'') {
