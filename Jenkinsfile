@@ -21,19 +21,19 @@ pipeline {
 	// 	}
   //   }
 
-    // stage('Docker pull images') {
-		//   steps {
-		// 	withDockerRegistry(credentialsId: 'docker-key', url:'') {
-		// 	  sh 'docker pull jana2007/jar-devops-hackathon'
-		// 	}
-		// }
-    // }
-    // stage('Run') {
-		//   steps {
-		// 	withDockerRegistry(credentialsId: 'docker-key', url:'') {
-		// 	  sh 'docker run --rm -p 3000:3000 jana2007/jar-devops-hackathon:latest'
-		// 	}
-		// }
-    // }
+    stage('Docker pull images') {
+		  steps {
+			//withDockerRegistry(credentialsId: 'docker-key', url:'') {
+			  shell 'docker pull jana2007/jar-devops-hackathon'
+			//}
+		}
+    }
+    stage('Run') {
+		  steps {
+			//withDockerRegistry(credentialsId: 'docker-key', url:'') {
+			  shell 'docker run --rm -p 3000:3000 jana2007/jar-devops-hackathon:latest'
+			//}
+		}
+    }
   }
 }
