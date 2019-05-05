@@ -13,13 +13,13 @@ pipeline {
       }
     }
 
-  stage('Push result image') {
-		  steps {
-			withDockerRegistry(credentialsId: 'docker-hub', url:'') {
-			  shell 'docker push jana2007/jar-devops-hackathon'
-			}
-		}
-    }
+  // stage('Push result image') {
+	// 	  steps {
+	// 		withDockerRegistry(credentialsId: 'docker-hub', url:'') {
+	// 		  shell 'docker push jana2007/jar-devops-hackathon'
+	// 		}
+	// 	}
+  //   }
 
     // stage('Docker pull images') {
 		//   steps {
