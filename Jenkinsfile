@@ -15,7 +15,7 @@ pipeline {
 
   stage('Push result image') {
 		  steps {
-			withDockerRegistry(credentialsId: 'JenkinsDockerHub', url:'') {
+			withDockerRegistry(credentialsId: 'docker-hub', url:'') {
 			  sh 'docker push jana2007/jar-devops-hackathon'
 			}
 		}
