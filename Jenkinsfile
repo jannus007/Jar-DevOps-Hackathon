@@ -9,14 +9,14 @@ pipeline {
 
  stage('Build docker image') {
       steps {
-        sh 'docker build -t jana2007/jar-devops-hackathon .'
+        shell 'docker build -t jana2007/jar-devops-hackathon .'
       }
     }
 
   stage('Push result image') {
 		  steps {
 			withDockerRegistry(credentialsId: 'docker-hub', url:'') {
-			  sh 'docker push jana2007/jar-devops-hackathon'
+			  shell 'docker push jana2007/jar-devops-hackathon'
 			}
 		}
     }
