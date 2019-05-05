@@ -9,7 +9,7 @@ pipeline {
 
  stage('Build docker image') {
       steps {
-        shell 'docker build -t jana2007/jar-devops-hackathon .'
+        sh 'docker build -t jana2007/jar-devops-hackathon .'
       }
     }
 
