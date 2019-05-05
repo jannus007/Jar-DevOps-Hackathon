@@ -31,7 +31,7 @@ pipeline {
     stage('Run') {
 		  steps {
 			//withDockerRegistry(credentialsId: 'docker-key', url:'') {
-			  shell 'docker run -p 3000:3000 jana2007/jar-devops-hackathon:latest'
+			  sh 'docker run -p 3000:3000 jana2007/jar-devops-hackathon:latest'
 			//}
 		}
     }
