@@ -9,7 +9,7 @@ pipeline {
 
  stage('Build docker image') {
       steps {
-        sh 'docker build -t jana2007/jar-devops-hackathon .'
+        bat 'docker build -t jana2007/jar-devops-hackathon .'
       }
     }
 
@@ -31,7 +31,7 @@ pipeline {
     stage('Run') {
 		  steps {
 			//withDockerRegistry(credentialsId: 'docker-key', url:'') {
-			  sh 'docker run -p 3000:3000 jana2007/jar-devops-hackathon:latest'
+			  bat 'docker run -p 3000:3000 jana2007/jar-devops-hackathon:latest'
 			//}
 		}
     }
