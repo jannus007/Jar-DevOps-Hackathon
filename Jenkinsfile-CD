@@ -8,9 +8,9 @@ pipeline {
         }
     stage('Docker pull images') {
 		  steps {
-			withDockerRegistry(credentialsId: 'docker-key', url:'') {
+			//withDockerRegistry(credentialsId: 'docker-key', url:'') {
 			  bat 'docker pull jana2007/jar-devops-hackathon'
-			}
+			//}
 		}
     }
     stage('Run') {
