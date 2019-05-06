@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout code') {
         steps {
-				checkout([$class: 'GitSCM', branches: [[name: "master"]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'Jenkins-Github', url: "https://github.com/jannus007/Jar-DevOps-Hackathon.git"]]])
+				checkout([$class: 'GitSCM', branches: [[name: "master"]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'it-credentials', url: "https://github.com/jannus007/Jar-DevOps-Hackathon.git"]]])
             }
         }   
     stage('Build docker image') {
@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Push result image') {
 		  steps {
-			withDockerRegistry(credentialsId: 'JenkinsDockerHub', url:'') {
+			withDockerRegistry(credentialsId: 'docker-key', url:'') {
 			  sh 'docker push jana2007/jar-devops-hackathon'
 			}
 		}

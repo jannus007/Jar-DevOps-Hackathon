@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout code') {
         steps {
-				checkout([$class: 'GitSCM', branches: [[name: "master"]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'it-credentials', url: "https://github.com/jannus007/Jar-DevOps-Hackathon.git"]]])
+				checkout([$class: 'GitSCM', branches: [[name: "master"]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'Git-credentials', url: "https://github.com/jannus007/Jar-DevOps-Hackathon.git"]]])
             }
         }
 
